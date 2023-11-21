@@ -11,6 +11,9 @@
 		A70281482B0A32BF00403D20 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70281472B0A32BF00403D20 /* ContentView.swift */; };
 		A702814A2B0A32C000403D20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A70281492B0A32C000403D20 /* Assets.xcassets */; };
 		A702814D2B0A32C000403D20 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A702814C2B0A32C000403D20 /* Preview Assets.xcassets */; };
+		A774DE9F2B0CB5B000C3B0EE /* JokesDara.swift in Sources */ = {isa = PBXBuildFile; fileRef = A774DE9E2B0CB5B000C3B0EE /* JokesDara.swift */; };
+		A774DEA12B0CC7AD00C3B0EE /* JokesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A774DEA02B0CC7AD00C3B0EE /* JokesViewModel.swift */; };
+		A774DEA42B0CC98A00C3B0EE /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = A774DEA32B0CC98A00C3B0EE /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		A70281472B0A32BF00403D20 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A70281492B0A32C000403D20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A702814C2B0A32C000403D20 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A774DE9E2B0CB5B000C3B0EE /* JokesDara.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesDara.swift; sourceTree = "<group>"; };
+		A774DEA02B0CC7AD00C3B0EE /* JokesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesViewModel.swift; sourceTree = "<group>"; };
+		A774DEA82B0CCEFD00C3B0EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A774DEA42B0CC98A00C3B0EE /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,8 +58,11 @@
 		A70281442B0A32BF00403D20 /* JokesApp */ = {
 			isa = PBXGroup;
 			children = (
+				A774DEA82B0CCEFD00C3B0EE /* Info.plist */,
+				A774DEA72B0CCCFE00C3B0EE /* View */,
+				A774DEA62B0CCA8C00C3B0EE /* ViewModel */,
+				A774DEA52B0CCA8200C3B0EE /* Model */,
 				A70281452B0A32BF00403D20 /* JokesAppApp.swift */,
-				A70281472B0A32BF00403D20 /* ContentView.swift */,
 				A70281492B0A32C000403D20 /* Assets.xcassets */,
 				A702814B2B0A32C000403D20 /* Preview Content */,
 			);
@@ -65,6 +75,30 @@
 				A702814C2B0A32C000403D20 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A774DEA52B0CCA8200C3B0EE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A774DE9E2B0CB5B000C3B0EE /* JokesDara.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A774DEA62B0CCA8C00C3B0EE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A774DEA02B0CC7AD00C3B0EE /* JokesViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A774DEA72B0CCCFE00C3B0EE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A70281472B0A32BF00403D20 /* ContentView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +117,9 @@
 			dependencies = (
 			);
 			name = JokesApp;
+			packageProductDependencies = (
+				A774DEA32B0CC98A00C3B0EE /* Alamofire */,
+			);
 			productName = JokesApp;
 			productReference = A70281422B0A32BF00403D20 /* JokesApp.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +148,9 @@
 				Base,
 			);
 			mainGroup = A70281392B0A32BF00403D20;
+			packageReferences = (
+				A774DEA22B0CC98A00C3B0EE /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = A70281432B0A32BF00403D20 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +177,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A774DE9F2B0CB5B000C3B0EE /* JokesDara.swift in Sources */,
 				A70281482B0A32BF00403D20 /* ContentView.swift in Sources */,
 				A70281462B0A32BF00403D20 /* JokesAppApp.swift in Sources */,
+				A774DEA12B0CC7AD00C3B0EE /* JokesViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +312,7 @@
 				DEVELOPMENT_TEAM = 9UGZTB7VYP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = JokesApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -299,6 +342,7 @@
 				DEVELOPMENT_TEAM = 9UGZTB7VYP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = JokesApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -339,6 +383,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A774DEA22B0CC98A00C3B0EE /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A774DEA32B0CC98A00C3B0EE /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A774DEA22B0CC98A00C3B0EE /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A702813A2B0A32BF00403D20 /* Project object */;
 }
